@@ -276,6 +276,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="index.html" class="md-nav__link md-nav__link--active">
         
   
@@ -285,6 +296,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      File formats
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -370,6 +427,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      File formats
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -390,7 +482,30 @@
 <p><img alt="Python Version from PEP 621 TOML" src="https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fsapph2c%2Fmentat%2Fmain%2Fpyproject.toml&amp;style=for-the-badge&amp;logo=python&amp;logoSize=auto" />
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/sapph2c/mentat/ci.yml?style=for-the-badge&amp;logo=github&amp;logoSize=auto" />
 <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/sapph2c/mentat/pypi?style=for-the-badge&amp;logo=pypi&amp;logoColor=white&amp;logoSize=auto" /></p>
-<p>Mentat is a Discord bot designed to streamline credential management and access tracking during red team engagements.</p>
+<p>Discord bot designed to streamline credential management and access tracking during red team engagements.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Automatic credential tracking for <code>SSH</code></li>
+<li>Red Team ChatOps via Discord <code>/</code> commands.</li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p>Mentat is managed using Discord <code>/</code> commands.</p>
+<p>Management commands include:</p>
+<ul>
+<li><code>/purge</code>: Removes all previous host channels</li>
+<li><code>/addhosts</code>: Adds a list of hosts and credentials from an attached <code>.yaml</code> file</li>
+<li><code>/addcreds &lt;host ip&gt; &lt;type&gt; &lt;username&gt; &lt;password&gt;</code>: Adds new credentials to a specified host</li>
+</ul>
+<h2 id="file-formats">File formats</h2>
+<p>Example <code>hosts.yaml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">192.168.56.1</span><span class="p">:</span>
+<span class="w">  </span><span class="n">creds</span><span class="p">:</span>
+<span class="w">    </span><span class="n">ssh</span><span class="p">:</span>
+<span class="w">      </span><span class="n">test_user</span><span class="p">:</span><span class="w"> </span><span class="n">test_pass</span>
+
+<span class="mf">192.168.56.2</span>
+<span class="mf">192.168.56.3</span>
+</code></pre></div>
 
 
 
